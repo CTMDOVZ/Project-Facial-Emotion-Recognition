@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reconocimiento Facial Emocional</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("static/background.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      header {
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+
+      #video-container {
+        position: relative;
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
+
+      #video-feed,
+      #canvas {
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+      }
+
+      #emotions-container {
+        margin-left: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: white;
+      }
+
+      #emotions-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      footer {
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script><script src="static/js/home.js"></script>
+
+    <header>
+      <h1>Face-Guard</h1>
+    </header>
+
+    <main>
+
+      <div id="video-container">
+        <video id="video-feed" autoplay></video>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="emotions-container">
+        <h2>Emociones Detectadas:</h2>
+        <ul id="emotions-list"></ul>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2023 - Reconocimiento Facial Grupo 2</p>
+    </footer>
+    
+    <script>
+      // Obtener el elemento de video y el lienzo del DOM
+      const videoElement = document.getElementById("video-feed");
+      const canvasElement = document.getElementById("canvas");
+
+      // Obtener acceso a la cámara y mostrar la transmisión de video en el elemento de video
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((stream) => {
+          videoElement.srcObject = stream;
+        })
+        .catch((error) => {
+          console.error("Error al acceder a la cámara: ", error);
+        });
+    </script>
+    
+</html>
