@@ -75,13 +75,6 @@ C:\Program Files\CMake\bin
     
 ## :tv: Link del video
 # https://www.youtube.com/watch?v=44-PHIaOvJo
-
-## Bibliografía
-# [1] G. Solano, «Omes,» 07 jul 2023. [En línea]. Available: https://omes-va.com/reconocimiento-de-emociones-opencv-python/. [Último acceso: 31 ago 2022].
-
-# [2] https://ieeexplore.ieee.org/document/9754019
-
-# [3] https://neuraspike.com/blog/realtime-emotion-detection-system-pytorch-opencv/
     
 ## Grupo 2
 - Ricardo Amiel Acuña Villogas
